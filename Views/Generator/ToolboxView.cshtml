@@ -1,0 +1,8 @@
+﻿@model KendoGenerator.Models.Generator.ToolboxModel
+
+@(Html.Kendo().ListView<KendoGenerator.Models.Controls.ControlsListModel>()
+    .Name("ListView")
+    .TagName("div")
+    .DataSource(dataSource => dataSource.
+                    Read(read => read.Action("GetToolboxControls", "Generator"))
+)
